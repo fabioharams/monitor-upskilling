@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  webhook.api:
+    image: webhook.api
+    build:
+      context: .
+      dockerfile: Webhook.Api/Dockerfile
