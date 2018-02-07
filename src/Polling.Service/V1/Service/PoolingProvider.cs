@@ -10,7 +10,7 @@ using System.Web;
 
 namespace Polling.Service.V1.Service
 {
-    public class PoolingProvider
+    public class PoolingProvider : IPoolingProvider
     {
         private const string POLLING_OPTIONS_SECTION = "PollingAD";
         private SPADOptions _ADOptions;
@@ -42,6 +42,7 @@ namespace Polling.Service.V1.Service
             return adOptions;
         }
 
+
         public async Task<Token> GetUserAccessTokenAsync()
         {
 
@@ -65,37 +66,6 @@ namespace Polling.Service.V1.Service
                 return token;
 
             }
-
-        
-
-        public async Task<List<CollectionMeasurement>> GetMetrics(List<Collection> cosmosCollections)
-        {
-            if (_accessToken == null || _accessToken.IsTokenExperied)
-                _accessToken = await GetUserAccessTokenAsync();
-
-            var token = GetAccessToken();
-            var creds = new TokenCloudCredentials(_subscriptionId, token);
-            var collectionMeasurements = new List<CollectionMeasurement>();
-
-            string docDbFilterString = "(name.value eq 'Total Requests' or name.value eq 'Throttled Requests')";
-
-            foreach (var collection in cosmosCollections)
-            {
-                var metrics = new Dictionary<DateTime, Measurement>();
-
-                string collectionResourceUri = string.Format(_collectionResourceBaseUri, _subscriptionId, _cosmosDbResourceGroupName, _cosmosDbAccountName, collection.DatabaseResourceId, collection.CollectionResourceId);
-                var resourceMetrics = GetResourceMetrics(creds, collectionResourceUri, docDbFilterString, TimeSpan.FromHours(1), "PT5M");
-
-                var collectionMeasurement = new CollectionMeasurement()
-                {
-                    DatabaseId = collection.DatabaseId,
-                    CollectionId = collection.CollectionId,
-                    Measurements = resourceMetrics
-                };
-                collectionMeasurements.Add(collectionMeasurement);
-            }
-
-            return collectionMeasurements;
         }
 
     }

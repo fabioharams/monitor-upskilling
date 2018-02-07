@@ -9,8 +9,4 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="V1\Interfaces\" />
-  </ItemGroup>
-
 </Project>
