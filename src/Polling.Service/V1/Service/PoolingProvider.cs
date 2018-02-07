@@ -28,7 +28,7 @@ namespace Polling.Service.V1.Service
             if (configuration.GetType().GetMethod("Bind") != null)
             {
                 object[] parameters = { graphSection, adOptions };
-                adOptions = configuration.GetType().GetMethod("Bind").Invoke(configuration, parameters) as GraphAdOptions;
+                adOptions = configuration.GetType().GetMethod("Bind").Invoke(configuration, parameters) as SPADOptions;
             }
             else
             {
