@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polling.Service", "Polling.Service\Polling.Service.csproj", "{20ABAE03-BEB5-417B-B0E7-71A060631F51}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhook.Service", "..\Webhook.Service\Webhook.Service.csproj", "{439B4214-DEAE-48B2-9FB0-537A1EC45C77}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polling.Service.Test", "Polling.Service.Test\Polling.Service.Test.csproj", "{4CB2BEE1-D86E-47CB-A817-487E7D87CDFC}"
 EndProject
@@ -17,7 +15,9 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository.Service", "Repository.Service\Repository.Service.csproj", "{A28DA4BE-B81E-4687-BEC3-6C89936B7055}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cmd", "Cmd\Cmd.csproj", "{5178147C-3F8A-4E89-8B14-5D0EBBCBE2C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhook.Service", "Webhook.Service\Webhook.Service.csproj", "{30797235-C1D6-4EF8-839A-DDBCAC65B08E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cmd", "Cmd\Cmd.csproj", "{45727F3A-85E5-461B-A0CB-A650C934FD47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{20ABAE03-BEB5-417B-B0E7-71A060631F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20ABAE03-BEB5-417B-B0E7-71A060631F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20ABAE03-BEB5-417B-B0E7-71A060631F51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{439B4214-DEAE-48B2-9FB0-537A1EC45C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{439B4214-DEAE-48B2-9FB0-537A1EC45C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{439B4214-DEAE-48B2-9FB0-537A1EC45C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{439B4214-DEAE-48B2-9FB0-537A1EC45C77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CB2BEE1-D86E-47CB-A817-487E7D87CDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CB2BEE1-D86E-47CB-A817-487E7D87CDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CB2BEE1-D86E-47CB-A817-487E7D87CDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,10 +49,14 @@ Global
 		{A28DA4BE-B81E-4687-BEC3-6C89936B7055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28DA4BE-B81E-4687-BEC3-6C89936B7055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A28DA4BE-B81E-4687-BEC3-6C89936B7055}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5178147C-3F8A-4E89-8B14-5D0EBBCBE2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5178147C-3F8A-4E89-8B14-5D0EBBCBE2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5178147C-3F8A-4E89-8B14-5D0EBBCBE2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5178147C-3F8A-4E89-8B14-5D0EBBCBE2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30797235-C1D6-4EF8-839A-DDBCAC65B08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30797235-C1D6-4EF8-839A-DDBCAC65B08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30797235-C1D6-4EF8-839A-DDBCAC65B08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30797235-C1D6-4EF8-839A-DDBCAC65B08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45727F3A-85E5-461B-A0CB-A650C934FD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45727F3A-85E5-461B-A0CB-A650C934FD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45727F3A-85E5-461B-A0CB-A650C934FD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45727F3A-85E5-461B-A0CB-A650C934FD47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
